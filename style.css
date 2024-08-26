@@ -1,0 +1,347 @@
+:root{
+    --color-1: #F3F5FC;
+    --color-2: #0A3871;
+    --color-3: #495057;
+    --color-4: #cccccc;
+    --color-5: #ffffff;
+    --color-6: #084FA7;
+    --color-7: #FF0000;
+    --color-8: #000000;
+}
+
+body{
+    background: var(--color-1);
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#logo{
+    width: 7.5rem;
+    height: 3rem;
+    display: flex;
+    position: relative;
+    top: 2.5rem;
+    left: 2.5rem;
+    bottom: 10%;
+    margin: 1%;
+}
+
+.container{
+    width: 50%;
+    height: 80vh;
+    position: relative;
+    margin: 1% 5% 1%;
+    padding: 2% 2% 1% 2%;
+    display: inline-block;
+}
+
+.input-padron{
+    position: relative;
+    top: 5%;
+    left: 10%;
+    background-color: var(--color-1);
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 150%;
+    border: 0px;
+    color: var(--color-2);
+    resize: none;
+    padding: 0;
+    margin: 0;
+}
+
+.input-padron::placeholder{
+    color: var(--color-2);
+}
+
+.input-padron:focus{
+    outline: none;
+}
+
+.zoneOnlyLowerCase{
+    position: relative;
+    top: 5%;
+    display: block;
+    height: 5%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    margin-left: 10%;
+}
+
+.textOnlyLowerCase{
+    width: 205px;
+    height: 18px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400px;
+    font-size: 12px;
+    line-height: 150%;
+    color: var(--color-3);
+    opacity: 0.8;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+button{
+    cursor: pointer;
+    border-radius: 24px;
+    background: var(--color-2);
+    border: 1px solid var(--color-2);
+}
+
+button:disabled {
+    background-color: var(--color-4);
+    color: var(--color-5);
+    cursor: not-allowed;
+}
+
+.botonesEncriptaDesencriptar{
+    top: 5%;
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 8%;
+    margin: 0px;
+    margin-left: 10%;
+}
+
+.buttonToEncrypt,
+.buttonToDecrypt{
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 2%;
+    width: 40%;
+    height: 8vh;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    font-family: Inter;
+}
+
+.buttonToEncrypt span{
+    width: 30%;
+    height: 19px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    color: var(--color-5);
+    flex: none;
+    order: 0;
+    flex-grow: 1;
+}
+
+.buttonToEncrypt:hover{
+    background: var(--color-6);
+}
+
+.buttonToDecrypt {
+    margin-left: 5%;
+    background: var(--color-1);
+}
+
+.buttonToDecrypt span{
+    width: 10%;
+    height: 10%;
+    font-family: 'Inter';
+    font-style: normal;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    color: var(--color-2);
+    flex: none;
+    order: 0;
+    flex-grow: 1;
+    }
+
+.buttonToDecrypt:hover{
+    background: var(--color-4);
+}
+
+.encryptZone{
+    position: absolute;
+    width: 30%;
+    height: 80%;
+    background-color: var(--color-5);
+    border-radius: 32px;
+    display: inline-block;
+    margin-bottom: 2%;
+    max-width: 20rem;
+    padding: 2%;
+    box-shadow: 0px 24px 32px -8px var(--color-8);
+}
+
+.muñeco{
+    width: 90%;
+    position: relative;
+    display: block;
+    margin-top: 35%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.ningunTexto{
+    position: relative;
+    display: grid;
+    width: 100%;
+    margin-top: 5%;
+}
+
+.ningunTexto span{
+    width: 100%;
+    height: 5%;
+    margin-bottom: 1rem;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 100%;
+    text-align: center;
+    color: var(--color-3);
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+.ningunTexto span#texto2{
+    width: 100%;
+    height: 50%;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 100%;
+    text-align: center;
+    color: var(--color-3);
+    flex: none;
+    order: 1;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+.showTextEncrypted{
+    position: relative;
+    width: 90%;
+    height: 85%;
+    margin: 5%;
+    resize: none;
+    border: none;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 150%;
+    color: var(--color-3);
+}
+
+.showTextEncrypted:focus-visible{
+    border: none;
+    outline: none;
+}
+
+
+#btnCopy{
+    box-sizing: border-box;
+    background-color: var(--color-5);
+    width: 60%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 24px;
+    gap: 8px;
+    position: relative;
+    margin-bottom: 10%;
+    margin-top: 1%;
+    margin-left: 20%;
+    margin-right: 20%;
+    border: 1px solid var(--color-2);
+    border-radius: 24px;
+}
+
+#btnCopy:hover {
+    background-color: var(--color-1);
+}
+
+.btnCopy-Text {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    color: var(--color-2);
+    flex: none;
+    order: 0;
+    flex-grow: 1;
+}
+
+
+@keyframes vibrate {
+    0% { transform: translate(0); }
+    20% { transform: translate(-2px, 2px); }
+    40% { transform: translate(-2px, -2px); }
+    60% { transform: translate(2px, 2px); }
+    80% { transform: translate(2px, -2px); }
+    100% { transform: translate(0); }
+}
+
+@keyframes highlight {
+    0% { background-color: initial; }
+    50% { background-color: var(--color-7); }
+    100% { background-color: initial; }
+}
+
+.vibrate-and-highlight {
+    animation: vibrate 1s, highlight 1s;
+}
+
+@media (max-width: 768px) {
+    #logo{
+        transition: 500ms all;
+        left: 0;
+        margin-left: 5%;
+        margin-bottom: 10%;
+    }
+    .container{
+        transition: 500ms all;
+        height: 60vh;
+    }
+    .input-padron{
+        left: 0;
+        margin-left: 5%;
+    }
+    .container{
+        width: 100%;
+        margin: 0;
+        padding: 0%;
+    }
+    .botonesEncriptaDesencriptar{
+        left: 0;
+        margin: 0;
+        text-align: center;
+    }
+    .encryptZone{
+        transition: 500ms all;
+        position: relative;
+        display: block;
+        margin: 5%;
+        width: 85%;
+        max-width: none;
+        height: 100%;
+
+    }
+    .muñeco{
+        display: none;
+        
+    }
+
+}
